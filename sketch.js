@@ -19,11 +19,21 @@
   var switch6;
 
   var song;
-      
+  var img1; 
+  var img2;
+  var img3;
+  var img4;
+  var img5;
+  var img6;
 
 function preload() {
 song = loadSound('Yay.mp3');
-img = loadImage('red.png');
+img1 = loadImage('redz.png');
+img2 = loadImage('lightblue.png');
+img3 = loadImage('green.png');
+img4 = loadImage('maroon.png');
+img5 = loadImage('turquoise.png');
+img6 = loadImage('lime.png');
 }
 
 function setup() {
@@ -47,63 +57,67 @@ function draw() {
   background(255);
   
 
-    if(switch1==0){ 
-	  song.play();
+    if(switch1==1){ 
+	rect(0, 0, width/3, height/2);
+	fill(253, 78, 179);
+
     }else{
-      fill(253, 78, 179);
+	  	image(img1, 0, 0);
 	  
-	  
-    }
-  
-   rect(0, 0, width/3, height/2);
-   noStroke();
-
-    if(switch2==0){
-      fill(145, 244, 249); 
-    }else{
-      fill(253, 78, 179);
     }
 
-   rect(0, height/2, width/3, height/2);
-   noStroke();
-
-    if(switch3==0){
-      fill(142, 211, 76); 
+    if(switch2==1){
+	rect(0, height/2, width/3, height/2);
+	fill(253, 78, 179);
+		 
     }else{
-      fill(253, 78, 179);
+	image(img2, 0, height/2);
+      
+    }
+
+
+    if(switch3==1){
+	  rect(width/3, 0, width/3, height/2);
+	  fill(253, 78, 179);
+
+	}else{
+    image(img3, width/3, 0);
+
     }
 	
-   rect(width/3, 0, width/3, height/2);
-   noStroke();
+
 	
 	
-    if(switch4==0){
-      fill(130, 29, 44); 
+    if(switch4==1){
+	rect(width/3, height/2, width/3, height/2);
+    fill(253, 78, 179);
+		
     }else{
-      fill(253, 78, 179);
+     image(img4, width/3, height/2); 
     }
 
-   rect(width/3, height/2, width/3, height/2);
-   noStroke();
+
    
-    if(switch5==0){
-      fill(2, 140, 163); 
+    if(switch5==1){
+	rect((width*2)/3, 0, width/3, height/2);
+	fill(253, 78, 179);
+     
     }else{
-      fill(253, 78, 179);
+     image(img5, (width*2)/3, 0);  
     }
 
-   rect((width*2)/3, 0, width/3, height/2);
-   noStroke();
-   
+      
 
-    if(switch6==0){
-      fill(210, 244, 66); 
+    if(switch6==1){
+    rect((width*2)/3, height/2, width/3, height/2);
+	fill(253, 78, 179);
+
+
     }else{
-      fill(253, 78, 179);
+    image(img6, (width*2)/3, height/2);  
     }
 
-   rect((width*2)/3, height/2, width/3, height/2);
-   noStroke();
+
    
 }
 
