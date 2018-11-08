@@ -26,6 +26,8 @@
   var img5;
   var img6;
 
+var songMemory;
+
 function preload() {
 song = loadSound('Yay.mp3');
 img1 = loadImage('redz.png');
@@ -50,19 +52,27 @@ function setup() {
  
  serial.list(); // list the serial ports
  serial.open(portName);              // open a serial port
-	
+	songMemory = 0;
 }
 
 function draw() {
   background(255);
-  
+  noStroke();
 
     if(switch1==1){ 
 	rect(0, 0, width/3, height/2);
 	fill(253, 78, 179);
+		songMemory = 0;
+		
 
     }else{
 	  	image(img1, 0, 0);
+		if ( song.isPlaying() ){
+			
+		} else if ( songMemory == 0){
+			song.play();
+			songMemory = 1;
+		}
 	  
     }
 
