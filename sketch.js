@@ -19,6 +19,12 @@
   var switch6;
 
   var song;
+  var song2;
+  var song3;
+  var song4;
+  var song5;
+  var song6;
+
   var img1; 
   var img2;
   var img3;
@@ -27,9 +33,20 @@
   var img6;
 
 var songMemory;
+var songMemory2;
+var songMemory3;
+var songMemory4;
+var songMemory5;
+var songMemory6;
+
 
 function preload() {
-song = loadSound('Yay.mp3');
+song = loadSound('rosyRed.mp3');
+song2 = loadSound('skyBlue.mp3');
+song3 = loadSound('grassyGreen.mp3');
+song4 = loadSound('magicalMaroon.mp3');
+song5 = loadSound('terrTurq.mp3');
+song6 = loadSound('lovelyLime.mp3');
 img1 = loadImage('redz.png');
 img2 = loadImage('lightblue.png');
 img3 = loadImage('green.png');
@@ -53,6 +70,16 @@ function setup() {
  serial.list(); // list the serial ports
  serial.open(portName);              // open a serial port
 	songMemory = 0;
+	songMemory2 = 0;
+	songMemory3 = 0;
+	songMemory4 = 0;
+	songMemory5 = 0;
+	songMemory6 = 0;
+
+
+
+
+
 }
 
 function draw() {
@@ -76,22 +103,41 @@ function draw() {
 	  
     }
 
+	
+	
     if(switch2==1){
 	rect(0, height/2, width/3, height/2);
 	fill(253, 78, 179);
+	songMemory2 = 0;
+
 		 
     }else{
 	image(img2, 0, height/2);
+	if ( song2.isPlaying() ){
+		
+			} else if ( songMemory2 == 0){
+			song2.play();
+			songMemory2 = 1;
+		}
       
     }
+	
 
 
     if(switch3==1){
 	  rect(width/3, 0, width/3, height/2);
 	  fill(253, 78, 179);
+	  	songMemory3 = 0;
 
 	}else{
     image(img3, width/3, 0);
+	if ( song3.isPlaying() ){
+		
+		} else if ( songMemory3 == 0){
+			song3.play();
+			songMemory3 = 1;
+		}
+      
 
     }
 	
@@ -101,9 +147,17 @@ function draw() {
     if(switch4==1){
 	rect(width/3, height/2, width/3, height/2);
     fill(253, 78, 179);
+	songMemory4 = 0;
 		
     }else{
-     image(img4, width/3, height/2); 
+     image(img4, width/3, height/2);
+		if ( song4.isPlaying() ){
+			
+			} else if ( songMemory4 == 0){
+			song4.play();
+			songMemory4 = 1;
+		}
+      
     }
 
 
@@ -111,9 +165,16 @@ function draw() {
     if(switch5==1){
 	rect((width*2)/3, 0, width/3, height/2);
 	fill(253, 78, 179);
-     
+    songMemory5 = 0; 
+	
     }else{
      image(img5, (width*2)/3, 0);  
+	if ( song5.isPlaying() ){
+		
+				} else if ( songMemory5 == 0){
+			song5.play();
+			songMemory5 = 1;
+		}
     }
 
       
@@ -121,10 +182,19 @@ function draw() {
     if(switch6==1){
     rect((width*2)/3, height/2, width/3, height/2);
 	fill(253, 78, 179);
+	songMemory6 = 0; 
 
 
     }else{
-    image(img6, (width*2)/3, height/2);  
+    image(img6, (width*2)/3, height/2); 
+		if ( song6.isPlaying() ){
+		
+		} else if ( songMemory6 == 0){
+			song6.play();
+			songMemory6 = 1;
+		}
+			
+			
     }
 
 
