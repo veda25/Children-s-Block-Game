@@ -25,6 +25,7 @@
   var song5;
   var song6;
 
+
   var img1; 
   var img2;
   var img3;
@@ -83,12 +84,12 @@ function setup() {
 }
 
 function draw() {
-  background(255);
+  background(0);
   noStroke();
 
     if(switch1==1){ 
 	rect(0, 0, width/3, height/2);
-	fill(253, 78, 179);
+	fill(0);
 		songMemory = 0;
 		
 
@@ -107,7 +108,7 @@ function draw() {
 	
     if(switch2==1){
 	rect(0, height/2, width/3, height/2);
-	fill(253, 78, 179);
+	fill(0);
 	songMemory2 = 0;
 
 		 
@@ -126,7 +127,7 @@ function draw() {
 
     if(switch3==1){
 	  rect(width/3, 0, width/3, height/2);
-	  fill(253, 78, 179);
+	  fill(0);
 	  	songMemory3 = 0;
 
 	}else{
@@ -146,7 +147,7 @@ function draw() {
 	
     if(switch4==1){
 	rect(width/3, height/2, width/3, height/2);
-    fill(253, 78, 179);
+    fill(0);
 	songMemory4 = 0;
 		
     }else{
@@ -164,7 +165,7 @@ function draw() {
    
     if(switch5==1){
 	rect((width*2)/3, 0, width/3, height/2);
-	fill(253, 78, 179);
+	fill(0);
     songMemory5 = 0; 
 	
     }else{
@@ -181,7 +182,7 @@ function draw() {
 
     if(switch6==1){
     rect((width*2)/3, height/2, width/3, height/2);
-	fill(253, 78, 179);
+	fill(0);
 	songMemory6 = 0; 
 
 
@@ -196,6 +197,9 @@ function draw() {
 			
 			
     }
+	
+
+
 
 
    
