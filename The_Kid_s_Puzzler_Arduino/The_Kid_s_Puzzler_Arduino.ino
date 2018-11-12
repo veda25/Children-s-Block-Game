@@ -29,7 +29,7 @@ void setup() {
   pinMode(5, INPUT_PULLUP);
   pinMode(6, INPUT_PULLUP);
   pinMode(7, INPUT_PULLUP);
-  pinMode(12, OUTPUT);
+  pinMode(11, OUTPUT);
 
 }
 
@@ -79,8 +79,8 @@ void loop() {
 
   // Turn on the built in LED any time any of the switches are activated
   if (switch1val == LOW || switch2val == LOW || switch3val == LOW || switch4val == LOW || switch5val == LOW || switch6val == LOW) {
-    digitalWrite(12, HIGH);
+    digitalWrite(11, HIGH);
   } else {
-    digitalWrite(12, LOW);
+    digitalWrite(11, LOW);
   }
 }
